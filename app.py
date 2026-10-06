@@ -31,7 +31,8 @@ def base_opts():
         "retries": 3,
         "fragment_retries": 3,
         # Browser jaisa TLS fingerprint — YouTube ki 403 blocking se bachne ke liye
-        # YouTube bot-check + media block se bachne ke liye mobile player clients
+        "impersonate": ImpersonateTarget(client="chrome", version="120", os="windows"),
+# YouTube bot-check + media block se bachne ke liye mobile player clients
         "extractor_args": {"youtube": {"player_client": ["ios", "android"]}},
     }
 def valid_yt_url(url: str) -> bool:
@@ -103,7 +104,6 @@ promptly.
 ### 5. Children's privacy
 This website is not directed at children under 13, and we do not knowingly
 collect information from children.
-
 ### 6. Changes to this policy
 We may update this Privacy Policy from time to time. The "Last updated" date
 at the top will reflect the latest version.

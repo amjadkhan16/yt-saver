@@ -35,7 +35,7 @@ def base_opts():
         "socket_timeout": 25,
         "retries": 3,
         "fragment_retries": 3,
-        # Browser jaisa TLS fingerprint — YouTube ki 403 blocking se bachne ke liye,
+        # Browser jaisa TLS fingerprint — YouTube ki 403 blocking se bachne ke liye
         # YouTube bot-check + media block se bachne ke liye mobile player clients
         "extractor_args": {"youtube": {"player_client": ["ios", "android"]}},
     }

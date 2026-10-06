@@ -78,7 +78,7 @@ if page == "✉️ Contact":
         "neeche diye gaye email par rabta karein:"
     )
     # >>> APNA EMAIL YAHAN LIKHEIN (AdSense ke liye asli email zaroori hai) <<<
-    CONTACT_EMAIL = "your-email@example.com"
+    CONTACT_EMAIL = "amjad786gcf@gmail.com"
     st.markdown(f"📧 **Email:** `{CONTACT_EMAIL}`")
     st.write("Hum aam tor par 48 hours ke andar jawab dene ki koshish karte hain.")
     st.divider()

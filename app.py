@@ -33,14 +33,18 @@ def base_opts():
         "no_warnings": True,
         "noplaylist": True,
         "socket_timeout": 25,
-        # YouTube bot-check se bachne ke liye android player client
-        "extractor_args": {"youtube": {"player_client": ["android"]}},
+        "retries": 3,
+        "fragment_retries": 3,
+        # Browser jaisa TLS fingerprint — YouTube ki 403 blocking se bachne ke liye
+        "impersonate": "chrome",
+        # YouTube bot-check + media block se bachne ke liye mobile player clients
+        "extractor_args": {"youtube": {"player_client": ["ios", "android"]}},
     }
 
 
 def valid_yt_url(url: str) -> bool:
     return bool(re.match(
-        r"^(https?://)?(www\.|m\.)?(youtube\.com/(watch|shorts|embed)|youtu\.be)/",
+        r"^(https?://)?(www\.|m\.)?(youtube\.com/(watch|shorts|embed)|youtu\.be)([/?#]|$)",
         url.strip(),
     ))
 
